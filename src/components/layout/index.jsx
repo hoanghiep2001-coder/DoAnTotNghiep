@@ -3,8 +3,11 @@ import styles from "./Layout.module.scss";
 import Blog from "./components/Blog";
 import Home from "./components/Home";
 import Navigation from "./components/Navigation";
+import MongoDB from "../../assets/data/mongoDB";
+
 const cb = classnames.bind(styles);
 function Layout() {
+  MongoDB.getDataFromCollection("product")
   return (
     <>
       <div className={cb("wrapper")}>
